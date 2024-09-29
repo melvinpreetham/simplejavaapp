@@ -1,14 +1,14 @@
-# Use the official Java image as a base
+# Use an OpenJDK 17 image
 FROM openjdk:17-jdk-alpine
 
-# Set the working directory
+# Set the working directory inside the container
 WORKDIR /app
 
 # Copy the jar file into the container
-COPY target/simplejavaapp.jar simplejavaapp.jar
+COPY target/SimpleJavaApp-1.0-SNAPSHOT.jar simplejavaapp.jar
 
 # Expose the port the app runs on
 EXPOSE 8080
 
-# Command to run the application
-ENTRYPOINT ["java", "-jar", "simplejavaapp.jar"]
+# Run the jar file
+CMD ["java", "-jar", "simplejavaapp.jar"]
