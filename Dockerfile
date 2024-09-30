@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy the jar file into the container
 COPY target/SimpleJavaApp-1.0-SNAPSHOT.jar simplejavaapp.jar
 
-# Expose a different port, like 8081
+# Expose a different port
 EXPOSE 8081
 
 # Run the jar file
